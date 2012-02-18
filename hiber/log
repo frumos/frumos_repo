@@ -1,0 +1,25 @@
++ Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] Searching repository for plugin with prefix: 'exec'.
+[INFO] ------------------------------------------------------------------------
+[INFO] Building hiber
+[INFO]    task-segment: [clean, compile, exec:java]
+[INFO] ------------------------------------------------------------------------
+[INFO] [clean:clean {execution: default-clean}]
+[INFO] Deleting directory D:\development\ent-workspace\hiber\target
+[INFO] [resources:resources {execution: default-resources}]
+[WARNING] Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Compiling 2 source files to D:\development\ent-workspace\hiber\target\classes
+[INFO] Preparing exec:java
+[INFO] No goals needed for project - skipping
+[INFO] [exec:java {execution: default-cli}]
+Hello World!
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1 second
+[INFO] Finished at: Mon Sep 12 23:58:28 EEST 2011
+[INFO] Final Memory: 13M/31M
+[INFO] ------------------------------------------------------------------------
