@@ -17,4 +17,8 @@ public abstract class DaoTemplate extends HibernateDaoSupport{
 		setSessionFactory(sessionFactory);
 	}
 	
+	public SessionFactory getSessionactory(){
+		return super.getSessionFactory();
+	}
+	
 }
