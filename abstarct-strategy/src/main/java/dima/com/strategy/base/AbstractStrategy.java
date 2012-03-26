@@ -13,7 +13,7 @@ public abstract class AbstractStrategy implements Map.Entry<String, IStrategy>, 
 	}
 	
 	public IStrategy setValue(IStrategy value) {
-		throw new UnsupportedOperationException();
+		throw new UnsupportedOperationException("Not allowed by java.util.Map implementation");
 	}
 
 }
