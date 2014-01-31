@@ -39,6 +39,7 @@ public class StackTest {
 		
 		stringStack.push(two);
 		assertTrue(stringStack.peek().equals(two));
+		assertTrue(stringStack.peek().equals(two));
 		assertTrue(stringStack.topOfStack == 1);
 		
 		stringStack.pop();
