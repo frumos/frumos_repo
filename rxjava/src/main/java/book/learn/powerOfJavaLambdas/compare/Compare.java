@@ -1,7 +1,9 @@
 package book.learn.powerOfJavaLambdas.compare;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Compare {
@@ -42,7 +44,51 @@ public class Compare {
 			.map(Person::toString)
 			.collect(Collectors.joining("\n")));
 		
+		System.out.println("-------------------------");
+		System.out.println("Reusing comparators");
 		
+		Comparator<Person> ageAsc = (p1, p2) -> p1.ageDifference(p2);
+		Comparator<Person> ageDesc = ageAsc.reversed();
+		
+		System.out.println(
+				people.stream()
+					.sorted(ageAsc)
+					.map(p -> p.toString())
+					.collect(Collectors.joining(", "))
+				);
+		
+		System.out.println(
+				people.stream()
+					.sorted(ageDesc)
+					.map(p -> p.toString())
+					.collect(Collectors.joining(", "))
+				);
+		
+		System.out.println("--------------------");
+		System.out.println("Youngest/oldes with comparator");
+		
+		people.stream()
+			.min(Person::ageDifference)
+			.ifPresent(result -> System.out.println("Youngest: " + result));
+		
+		people.stream()
+			.max(Person::ageDifference)
+			.ifPresent(result -> System.out.println("Oldest: " + result));
+	
+		
+		System.out.println("--------------------");
+		System.out.println("Multiple comparision");
+		
+		Function<Person, Integer> byAge = p -> p.getAge();
+		Function<Person, String> byName = p -> p.getName();
+		
+		System.out.println("Multiple comparision by Age and then by Name\n" +
+			people.stream()
+				.sorted(Comparator.comparing(byAge)
+					.thenComparing(byName))
+				.map(p -> p.toString())
+				.collect(Collectors.joining(", ")));
+			
 	}
 	
 
