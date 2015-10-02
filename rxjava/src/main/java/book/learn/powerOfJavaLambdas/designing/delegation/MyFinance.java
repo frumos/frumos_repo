@@ -1,4 +1,4 @@
-package book.learn.powerOfJavaLambdas.designing;
+package book.learn.powerOfJavaLambdas.designing.delegation;
 
 import java.math.BigDecimal;
 

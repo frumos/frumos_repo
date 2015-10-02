@@ -1,10 +1,10 @@
-package book.learn.powerOfJavaLambdas.designing;
+package book.learn.powerOfJavaLambdas.designing.strategy;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-import book.learn.powerOfJavaLambdas.designing.Asset.AssetType;
+import book.learn.powerOfJavaLambdas.designing.strategy.Asset.AssetType;
 
 public class AssetUtil {
 	

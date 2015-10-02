@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.function.Function;
 
 import org.junit.Test;
+
+import book.learn.powerOfJavaLambdas.designing.delegation.CalculateNAV;
 import static org.junit.Assert.*;
 
 /**
