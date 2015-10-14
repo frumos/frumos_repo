@@ -12,6 +12,8 @@ import java.util.function.Function;
 
 public class CalculateNAV {
 	
+	private Function<String, BigDecimal> priceFinder;
+	
 	// constructor to inject function
 	public CalculateNAV(Function<String, BigDecimal> priceFinder) {
 		this.priceFinder = priceFinder;
@@ -26,7 +28,6 @@ public class CalculateNAV {
 		return priceFinder.apply(ticker).multiply(BigDecimal.valueOf(shares));
 	}
 	
-	private Function<String, BigDecimal> priceFinder;
 	
 	public static void main(String[] args) {
 		
