@@ -1,4 +1,4 @@
-package book.learn.powerOfJavaLambdas.designing.delegation;
+package book.learn.powerOfJavaLambdas.designing.builder;
 
 import java.util.function.Consumer;
 
