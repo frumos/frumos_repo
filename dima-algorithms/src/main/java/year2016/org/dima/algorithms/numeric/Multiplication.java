@@ -4,33 +4,26 @@ public class Multiplication {
 			
 	public static void main(String[] args) {
 		
-		int b = 200;
-		System.out.println(b>>1);
-		
-		System.out.println(b>>2);
-		System.out.println(b>>3);
-		System.out.println(b>>4);
-		System.out.println(b>>5);
-		
-		System.out.println(b>>6);
-		System.out.println(b>>7);
-		
-		System.out.println(b>>8);
-		
-		System.out.println(b>>9);
-		
-		
-		System.out.println("");
-		
-		
-		int a = 2;
-		
-		System.out.println(Integer.toBinaryString(a));
-			
-		System.out.println(Integer.toBinaryString(a<<1));
-		System.out.println(Integer.toBinaryString(a<<2));
-		System.out.println(Integer.toBinaryString(a<<3));
-		
+		Multiplication mul = new Multiplication();
+		System.out.println(mul.mult(6, 4));		
+	}
+	
+	int mult(int x, int y) {
+		return mull(x, y, y);		
+	}	
+	
+	private int mull(int x, int y, int z) {
+		if ( x == 0) {
+			return z;
+		} else {
+			x = x >> 1;
+			y = y << 1;
+			if (x % 2 == 0) {
+				return mull(x, y, z);
+			} else {
+				return mull(x, y, z + y);
+			}			
+		}		
 	}
 	
 
